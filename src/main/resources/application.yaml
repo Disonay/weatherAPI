@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl:
+          auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    validate-on-migrate: true
+
+values:
+  delay: 300000
+  baseUrl: "https://api.weatherapi.com/v1"
