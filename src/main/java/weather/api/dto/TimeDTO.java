@@ -9,8 +9,8 @@ import java.time.LocalDate;
 @Data
 public class TimeDTO {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    LocalDate from;
+    private LocalDate from;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    LocalDate to;
+    private LocalDate to;
 }

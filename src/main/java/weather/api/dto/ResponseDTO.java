@@ -7,7 +7,7 @@ import lombok.Data;
 public class ResponseDTO
 {
     @JsonUnwrapped
-    WeatherDTO weather;
+    private WeatherDTO weather;
 
-    LocationDTO location;
+    private LocationDTO location;
 }

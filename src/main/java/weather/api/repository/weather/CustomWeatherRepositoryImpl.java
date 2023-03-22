@@ -53,7 +53,7 @@ public class CustomWeatherRepositoryImpl implements CustomWeatherRepository {
         criteriaQuery
                 .select(
                         criteriaBuilder.construct(AvgWeatherDTO.class,
-                            criteriaBuilder.avg(root.get("temp")),
+                            criteriaBuilder.avg(root.get("tempC")),
                             criteriaBuilder.avg(root.get("windMph")),
                             criteriaBuilder.avg(root.get("pressureMb")),
                             criteriaBuilder.avg(root.get("humidity"))))

@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 public class LocationDTO {
     @JsonAlias("region")
-    String city;
-    String country;
+    private String city;
+    private String country;
 }

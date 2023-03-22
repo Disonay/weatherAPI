@@ -18,7 +18,7 @@ public class WeatherEntity {
     private Long id;
 
     @Column(name = "temperature")
-    private Double temp;
+    private Double tempC;
 
     @Column(name = "wind_mph")
     private Double windMph;

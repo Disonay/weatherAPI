@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 public class ConditionDTO {
     @JsonProperty("text")
-    String condition;
+    private String condition;
 }
