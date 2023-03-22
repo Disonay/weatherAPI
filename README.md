@@ -1,4 +1,4 @@
-# weatherAPI
+# WeatherAPI
 
 The Weather API is an application that fetches weather data from a third-party API and stores it in a database at 
 specified intervals for a particular city. 
@@ -34,7 +34,7 @@ Request example:
 ```json
 {
     "from": "2023-03-20",
-    "to": "2023-02-23"
+    "to": "2023-03-23"
 }
 ```
 
