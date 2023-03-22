@@ -17,5 +17,9 @@ spring:
     validate-on-migrate: true
 
 values:
-  delay: 300000
-  baseUrl: "https://api.weatherapi.com/v1"
+  scheduled:
+    delay: 300000
+  api:
+    baseUrl: "https://api.weatherapi.com/v1"
+    key: ${API_KEY}
+    q: "Minsk"

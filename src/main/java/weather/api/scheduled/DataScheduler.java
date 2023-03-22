@@ -15,7 +15,7 @@ public class DataScheduler {
     private final ApiDataProvider apiDataProvider;
     private final Saver saver;
 
-    @Scheduled(fixedDelayString = "${values.delay}")
+    @Scheduled(fixedDelayString = "${values.scheduled.delay}")
     void ScheduledWeatherTask() {
         Optional<ExternalApiResponseDTO> infoDTO = apiDataProvider.getCurrentWeatherFromApi();
         saver.payload(infoDTO).execute();

@@ -1,6 +1,7 @@
 package weather.api.provider;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import weather.api.dto.ExternalApiResponseDTO;
@@ -13,14 +14,20 @@ public class ApiDataProvider {
 
     private final WebClient webClient;
 
+    @Value("${values.api.key}")
+    private String key;
+
+    @Value("${values.api.q}")
+    private String q;
+
     public Optional<ExternalApiResponseDTO> getCurrentWeatherFromApi() {
         return Optional.ofNullable(
                 webClient
                         .get()
                         .uri(uriBuilder -> uriBuilder
                                 .path("/current.json")
-                                .queryParam("key", "4ecdfc7ef90547e3b47184503231803")
-                                .queryParam("q", "Minsk")
+                                .queryParam("key", key)
+                                .queryParam("q", q)
                                 .build()
                         )
                         .retrieve()
